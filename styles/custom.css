@@ -6,7 +6,7 @@ body {
 
 header {
     background-color: white;
-    margin: 5% 10%;
+    margin: 5% 10% 0%;
     padding: 70px 92px 35px 92px !important;
 }
 
@@ -45,8 +45,8 @@ header {
 
 .rowContainer {
     display: table;
-    /* padding-right: 400px; */
-    max-width: 330px
+    max-width: 330px;
+    padding-bottom: 50px;
 }
 
 .rowImage {
@@ -57,4 +57,11 @@ header {
 .rowText {
     margin-top: 45px;
     padding-left: 20px;
+}
+
+section {
+    background-color: #F9F9F9;
+    margin: 0% 10%;
+    padding: 70px 92px 35px 92px !important;
+    border-top: 1px dotted;
 }
