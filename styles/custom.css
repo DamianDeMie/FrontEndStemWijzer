@@ -1,0 +1,60 @@
+body {
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+    background-color: white;
+    margin: 5% 10%;
+    padding: 70px 92px 35px 92px !important;
+}
+
+#logo {
+    height: 56px;
+    width: 331px;
+}
+
+#votingTitle {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#votingSubTitle {
+    font-size: 22px;
+    font-weight: bold;
+    color: #01b4dc;
+    line-height: 1.3em;
+    padding: 20px 0;
+    margin-bottom: 40px;
+}
+
+.startBtn {
+    float: right;
+    margin-top: 7px;
+    width: 188px;
+    height: 68px;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.startBtn:hover {
+    background-color: #018aa9 !important;
+    color: white !important;
+}
+
+.rowContainer {
+    display: table;
+    /* padding-right: 400px; */
+    max-width: 330px
+}
+
+.rowImage {
+    float: left;
+    width: 50px;
+}
+
+.rowText {
+    margin-top: 45px;
+    padding-left: 20px;
+}
