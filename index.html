@@ -20,7 +20,7 @@
             Test uw politieke voorkeur aan de hand van 30 stellingen
         </h2>
 
-        <button class="w3-button w3-black w3-round startBtn">Start</button>
+        <button onclick="test()" class="w3-button w3-black w3-round startBtn">Start</button>
 
         <div class="w3-row rowContainer">
             <img class="w3-cell rowImage" src="images/icon-xsable.svg" alt="Slotje" />
@@ -36,13 +36,134 @@
             </p>
         </div>
     </header>
-    <section class="w3-container">
-        <img src="images/logo-stemmentracker.svg" alt="">
+    <section class="w3-container info">
+        <img src="images/logo-stemmentracker.svg" id="stemtrackerImage" alt="">
         <p>Wat hebben de partijen in het verleden waargemaakt van hun verkiezingsbeloften? 'Track' uw stem met de
             Stemmentracker,
-            een website die terugblikt op 30 Tweede Kamerstemmingen van de afgelopen regeerperiode. Met welke partij
+            een website die terugblikt op 30 Tweede Kamerstemmingen van de afgelopen regeerperiode. Met welke kandidaat
             stemde u mee?</p>
     </section>
+    <section class="w3-container politicalParties">
+        <div id="eenVandaagLogo">
+            <img src="images/logo-1v.svg" alt="">
+        </div>
+        <div>
+            <h5>Deze partijen doen mee</h5>
+            <div class='kandidaat'>
+                <img src="images/parties/vvd.svg" alt="">
+            </div>
+
+            <div class='kandidaat'>
+                <img src="images/parties/pvda.svg" alt="">
+            </div>
+
+            <div class='kandidaat'>
+                <img src="images/parties/pvv.svg" alt="">
+            </div>
+
+            <div class='kandidaat'>
+                <img src="images/parties/sp.svg" alt="">
+            </div>
+
+            <div class='kandidaat'>
+                <img src="images/parties/cda.svg" alt="">
+            </div>
+
+            <div class='kandidaat'>
+                <img src="images/parties/d66.svg" alt="">
+            </div>
+
+            <div class='kandidaat'>
+                <img src="images/parties/christenunie.svg" alt="">
+            </div>
+
+            <div class='kandidaat'>
+                <img src="images/parties/groenlinks.svg" alt="">
+            </div>
+
+            <div class='kandidaat'>
+                <img src="images/parties/sgp.svg" alt="">
+            </div>
+
+            <div class='kandidaat'>
+                <img src="images/parties/pvdd.svg" alt="">
+            </div>
+
+            <div class='kandidaat'>
+                <img src="images/parties/50plus.svg" alt="">
+            </div>
+
+            <div class='kandidaat'>
+                <img class="image" src="images/parties/ondernemerspartij.png" alt="">
+            </div>
+
+            <div class='kandidaat'>
+                <img src="images/parties/vnl.svg" alt="">
+            </div>
+
+            <div class='kandidaat'>
+                <img src="images/parties/denk.svg" alt="">
+            </div>
+
+            <div class='kandidaat'>
+                <img class="image" src="images/parties/nieuwewegen.png" alt="">
+            </div>
+
+            <div class='kandidaat'>
+                <img class="image" src="images/parties/forumvoordemocratie.png" alt="">
+            </div>
+
+            <div class='kandidaat'>
+                <img class="image" src="images/parties/burgerbeweging (2).png" alt="">
+            </div>
+
+            <div class='kandidaat'>
+                <img class="image" src="images/parties/vrijzinnigepartij.png" alt="">
+            </div>
+
+            <div class='kandidaat'>
+                <img src="images/parties/piratenpartij.svg" alt="">
+            </div>
+
+            <div class='kandidaat'>
+                <img class="image" src="images/parties/artikel1.png" alt="">
+            </div>
+
+            <div class='kandidaat'>
+                <img src="images/parties/nietstemmers.svg" alt="">
+            </div>
+
+            <div class='kandidaat'>
+                <img src="images/parties/lokaalindekamer.svg" alt="">
+            </div>
+        </div>
+        <div class="notUpForElection">
+            <h5>Deze partijen doen niet mee</h5>
+            <div>
+                <div class="kandidaat">
+                    <img class="image" src="images/parties/geenpeil.png" alt="">
+                </div>
+                <div class="kandidaat">
+                    <img class="image" src="images/parties/jezusleeft.png" alt="">
+                </div>
+                <div class="kandidaat">
+                    <img class="image" src="images/parties/stemnl.png" alt="">
+                </div>
+                <div class="kandidaat">
+                    <img class="image" src="images/parties/mensspirit.png" alt="">
+                </div>
+                <div class="kandidaat">
+                    <img class="image" src="images/parties/vdp.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
+
+<script>
+    function test() {
+        alert("Je Moeder");
+    }
+</script>
 
 </html>

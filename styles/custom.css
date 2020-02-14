@@ -59,9 +59,60 @@ header {
     padding-left: 20px;
 }
 
-section {
+.info{
     background-color: #F9F9F9;
     margin: 0% 10%;
-    padding: 70px 92px 35px 92px !important;
-    border-top: 1px dotted;
+    padding: 20px 92px 35px 92px !important;
+    border-top: 2px dotted;
+}
+
+#stemtrackerImage{
+    width: 48%;
+    opacity: .7;
+    border-bottom: 2px solid transparent;
+    margin-bottom: 1em
+}
+
+.politicalParties{
+    background-color: #01B4DC;
+        margin: 0% 10%;
+    padding: 20px 92px 35px 92px !important;
+}
+
+#eenVandaagLogo {
+margin-top: 20px;
+width: 200px;
+height: auto;
+}
+
+.kandidaat {
+    background-color: white;
+    border-radius: 50%;
+    display: block;
+    padding:2px;
+    width: 45px;
+    float: left;
+    margin-left: 8px;
+    margin-top: 10px;
+    overflow: hidden;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.kandidaat:hover{
+    box-shadow: rgba(0,0,0,0.8) 0 0 5px;
+    transform: scale(1.8);
+    cursor: pointer;
+}
+
+.image{
+    width: 45px;
+}
+
+.notUpForElection{
+    margin-top: 80px;
+}
+
+h5 {
+    color:white;
 }
