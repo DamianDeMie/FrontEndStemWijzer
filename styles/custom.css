@@ -12,6 +12,15 @@ header {
     padding: 70px 92px 35px 92px !important;
 }
 
+#startPage{
+    margin-bottom: 3%;
+}
+
+#standPage{
+    background-color: white;
+    margin: 5% 10% 0%;
+}
+
 #logo {
     height: 56px;
     width: 331px;
@@ -33,9 +42,8 @@ header {
 
 .startBtn {
     float: right;
-    margin-top: 7px;
-    width: 188px;
-    height: 68px;
+    width: 10vw;
+    height: 8vh;
     font-size: x-large;
     font-weight: bold;
 }
@@ -45,18 +53,18 @@ header {
     color: white !important;
 }
 
-.rowContainer {
+.tableContainer {
     display: table;
     max-width: 330px;
     padding-bottom: 50px;
 }
 
-.rowImage {
+.tableImage {
     float: left;
     width: 50px;
 }
 
-.rowText {
+.tableText {
     margin-top: 45px;
     padding-left: 20px;
 }
@@ -126,12 +134,46 @@ h5 {
     display: none;
 }
 
+.standSection {
+  padding-left: 110px;
+  padding-right: 110px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
 .progressBar {
     height: 24px;
     width: 3.33%;
     background-color: rgb(1, 180, 220);
 }
 
-.backButton {
-    border-radius: 50%
+#standTitle {
+    font-size: 33px;
+    color: #01B4DC;
+    font-family: 'Arial';
+    font-weight: bold;
+}
+
+#standStatement {
+    font-size: 33px;
+    min-height: 155px;
+    font-family: 'Arial';
+    margin-bottom: 1em;
+}
+
+.standBtn {
+    height: 8vh;
+    font-size: x-large;
+    font-weight: bold;
+    margin-right: 2vw;
+    padding: 0px 50px;
+}
+
+.standBtn:hover {
+    background-color: #018aa9 !important;
+    color: white !important;
+}
+
+.hoverEffect:hover {
+  cursor: pointer;
 }

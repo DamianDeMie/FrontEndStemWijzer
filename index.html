@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <title>Stemwijzer JavaScript Challenge</title>
     <link rel="stylesheet" href="styles/w3.css" />
     <link rel="stylesheet" href="styles/custom.css" />
-    <script src="js/script.js"></script>
-    <script src="js/testdata.js"></script>
 
 </head>
 
@@ -25,18 +25,18 @@
                 Test uw politieke voorkeur aan de hand van 30 stellingen
             </h2>
 
-            <button onclick="test()" class="w3-button w3-black w3-round startBtn">Start</button>
+            <button onclick="start()" class="w3-button w3-black w3-round startBtn">Start</button>
 
-            <div class="w3-row rowContainer">
-                <img class="w3-cell rowImage" src="images/icon-xsable.svg" alt="Slotje" />
-                <p class="w3-cell rowText">
+            <div class="w3-row tableContainer">
+                <img class="w3-cell tableImage" src="images/icon-xsable.svg" alt="Slotje" />
+                <p class="w3-cell tableText">
                     Bekijk de toegankelijke versie voor mensen met een visuele
                     beperking
                 </p>
             </div>
-            <div class="w3-row rowContainer">
-                <img class="w3-cell rowImage" src="images/icon-lock.svg" alt="Slotje" />
-                <p class="w3-cell rowText">
+            <div class="w3-row tableContainer">
+                <img class="w3-cell tableImage" src="images/icon-lock.svg" alt="Slotje" />
+                <p class="w3-cell tableText">
                     De StemWijzer maakt geen gebruik van cookies. Klik hier voor de volledige privacy statement
                 </p>
             </div>
@@ -167,10 +167,30 @@
     </section>
 
     <section id='standPage'>
-        <div class="w3-border">
-            <div class="progressBar"></div>
+        <div class="progressBar" id='progressBar'></div>
+        <div class='w3-border'>
+            <div class="backButton w3-padding">
+                <button onclick="backButton()" class="w3-button w3-circle w3-light-grey">
+                    <img src="images/icon-arrow-back.svg" alt="">
+                </button>
+            </div>
+            <div class="w3-container standSection">
+                <h2 id="standTitle">PLACEHOLDER</h2>
+                <p id="standStatement">PLACEHOLDER</p>
+                <div class="w3-left">
+                    <button class='w3-button w3-black w3-round standBtn' onclick="nextStatement('pro')">Eens</button>
+                    <button class='w3-button w3-black w3-round standBtn' onclick="nextStatement('none')">Geen van
+                        beide</button>
+                    <button class='w3-button w3-black w3-round standBtn'
+                        onclick="nextStatement('contra')">Oneens</button>
+                </div>
+                <a id="noOpinion" class="hoverEffect w3-text-grey w3-right">Sla deze vraag over <i
+                        class="fa fa-arrow-right"></i></a>
+            </div>
         </div>
     </section>
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
