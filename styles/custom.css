@@ -4,6 +4,8 @@ body {
     background-attachment: fixed;
 }
 
+/* Start Pagina */
+
 header {
     background-color: white;
     margin: 5% 10% 0%;
@@ -115,4 +117,21 @@ height: auto;
 
 h5 {
     color:white;
+}
+
+
+/* Standpunten Pagina */
+
+#standPage {
+    display: none;
+}
+
+.progressBar {
+    height: 24px;
+    width: 3.33%;
+    background-color: rgb(1, 180, 220);
+}
+
+.backButton {
+    border-radius: 50%
 }
