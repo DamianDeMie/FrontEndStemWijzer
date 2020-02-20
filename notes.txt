@@ -1,0 +1,9 @@
+1. Zorgen dat de vragen op het scherm komen
+2. Mening kunnen geven per vraag en op kunnen slaan
+3. Meningen vergelijken
+
+
+JAVASCRIPT NOTES:
+
+Vergelijk eigen kant met partijen (door middel van een Array)
+For Loops

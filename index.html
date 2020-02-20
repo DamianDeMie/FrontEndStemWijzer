@@ -166,6 +166,7 @@
         </section>
     </section>
 
+    <!-- Standpunten Pagina -->
     <section id='standPage'>
         <div class="progressBar" id='progressBar'></div>
         <div class='w3-border'>
@@ -184,12 +185,18 @@
                     <button class='w3-button w3-black w3-round standBtn'
                         onclick="nextStatement('contra')">Oneens</button>
                 </div>
-                <a id="noOpinion" class="hoverEffect w3-text-grey w3-right">Sla deze vraag over <i
-                        class="fa fa-arrow-right"></i></a>
+                <a onclick='nextStatement()' id="noOpinion" class="hoverEffect w3-text-grey w3-right">Sla deze vraag
+                    over <i class="fa fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
-    <script src="js/data.js"></script>
+
+    <!-- Resultaten Pagina -->
+    <section id='resultsPage'>
+    </section>
+
+
+    <script src="js/testdata.js"></script>
     <script src="js/script.js"></script>
 </body>
 

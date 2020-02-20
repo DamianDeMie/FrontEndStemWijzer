@@ -1,10 +1,9 @@
-var progressBar = 3.33;
+var progressBar = 100 / subjects.length;
+const progress = progressBar;
 var question = 0;
 var partyPosition = ['pro', 'contra', 'none'];
 var data = [];
 
-var partyOpinion = document.getElementById('partyOpinion');
-var opinionPage = document.getElementById('opinionPage');
 var standTitle = document.getElementById('standTitle');
 var standStatement = document.getElementById('standStatement');
 
@@ -14,10 +13,6 @@ standStatement.innerHTML = subjects[question].statement;
 subjects.forEach(userInput => {
     userInput.myOpinion = "";
     userInput.important = false;
-});
-
-document.getElementById("noOpinion").addEventListener("click", function () {
-    nextStatement();
 });
 
 function start() {
@@ -31,30 +26,33 @@ function backButton() {
         document.getElementById("standPage").style.display = "none";
     } else {
         question = question - 1;
-        progressBar = progressBar - 3.33;
-        routineFunction();
+        progressBar = progressBar - progress;
+        continueStemWijzer();
     }
 }
 
 function nextStatement(opinion) {
     question = question + 1;
-    if (question == 29) {
+    if (question == subjects.length - 1) {
         progressBar = 100;
-    } else if (question == 30) {
+    } else if (question == subjects.length) {
         showResults();
     } else {
-        progressBar = progressBar + 3.33;
+        progressBar = progressBar + progress;
     }
 
     subjects[question].myOpinion = opinion;
-    routineFunction();
+    continueStemWijzer();
 }
 
-function routineFunction() {
+function continueStemWijzer() {
     standTitle.innerHTML = question + 1 + ". " + subjects[question].title;
     standStatement.innerHTML = subjects[question].statement;
 
     document.getElementById("progressBar").style.width = progressBar.toString() + "%";
 }
 
-function showResults() { }
+function showResults() {
+    document.getElementById("standPage").style.display = "none";
+    document.getElementById("resultsPage").style.display = "block";
+}

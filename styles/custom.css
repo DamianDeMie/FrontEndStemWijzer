@@ -16,10 +16,6 @@ header {
     margin-bottom: 3%;
 }
 
-#standPage{
-    background-color: white;
-    margin: 5% 10% 0%;
-}
 
 #logo {
     height: 56px;
@@ -132,7 +128,10 @@ h5 {
 
 #standPage {
     display: none;
+    background-color: white;
+    margin: 5% 10% 0%;
 }
+
 
 .standSection {
   padding-left: 110px;
@@ -143,7 +142,7 @@ h5 {
 
 .progressBar {
     height: 24px;
-    width: 3.33%;
+    width: 0%;
     background-color: rgb(1, 180, 220);
 }
 
@@ -176,4 +175,13 @@ h5 {
 
 .hoverEffect:hover {
   cursor: pointer;
+}
+
+/* Resultaten Pagina */
+
+#resultsPage {
+    display: none;
+    background-color: white;
+    margin: 5% 10% 0%;
+    padding: 70px 92px 35px 92px !important;
 }
