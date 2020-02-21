@@ -7,6 +7,8 @@ var data = [];
 var standTitle = document.getElementById('standTitle');
 var standStatement = document.getElementById('standStatement');
 
+document.getElementById("progressBar").style.width = progressBar.toString() + "%"
+
 standTitle.innerHTML = question + 1 + ". " + subjects[question].title;
 standStatement.innerHTML = subjects[question].statement;
 
