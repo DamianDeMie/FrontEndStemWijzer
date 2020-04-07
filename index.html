@@ -179,11 +179,10 @@
                 <h2 id="standTitle">PLACEHOLDER</h2>
                 <p id="standStatement">PLACEHOLDER</p>
                 <div class="w3-left">
-                    <button class='w3-button w3-black w3-round standBtn' onclick="nextStatement('pro')">Eens</button>
-                    <button class='w3-button w3-black w3-round standBtn' onclick="nextStatement('none')">Geen van
+                    <button class='w3-button w3-black w3-round standBtn' onclick="getOpinion('pro')">Eens</button>
+                    <button class='w3-button w3-black w3-round standBtn' onclick="getOpinion('none')">Geen van
                         beide</button>
-                    <button class='w3-button w3-black w3-round standBtn'
-                        onclick="nextStatement('contra')">Oneens</button>
+                    <button class='w3-button w3-black w3-round standBtn' onclick="getOpinion('contra')">Oneens</button>
                 </div>
                 <a onclick='nextStatement()' id="noOpinion" class="hoverEffect w3-text-grey w3-right">Sla deze vraag
                     over <i class="fa fa-arrow-right"></i></a>
