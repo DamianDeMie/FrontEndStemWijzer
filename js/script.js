@@ -34,7 +34,7 @@ function backButton() {
         continueStemWijzer();
     }
 }
-
+//Goes to the next statement, if it isn't finished yet it will loop until it is finished.
 function nextStatement() {
     if (question < subjects.length - 1) {
         progressBar = progressBar + progress;
@@ -46,11 +46,13 @@ function nextStatement() {
     }
 }
 
+// Gets the opinion that the user entered.
 function getOpinion(opinion) {
     subjects[question].myOpinion = opinion;
     nextStatement();
 }
 
+// Shows the next question on the page.
 function continueStemWijzer() {
     standTitle.innerHTML = question + 1 + ". " + subjects[question].title;
     standStatement.innerHTML = subjects[question].statement;
@@ -59,6 +61,7 @@ function continueStemWijzer() {
         progressBar.toString() + "%";
 }
 
+// Shows the results (currently only in the console).
 function showResults() {
     document.getElementById("standPage").style.display = "none";
     document.getElementById("resultsPage").style.display = "block";
