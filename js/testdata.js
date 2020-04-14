@@ -110,26 +110,22 @@ var parties = [
     secular: true,
     size: 20,
     long: "Partij voor de Vrijheid",
-    score: 0
   },
   {
     name: "D66",
     secular: true,
     size: 19,
     long: "Democratie 66",
-    score: 0
   },
   {
     name: "GroenLinks",
     secular: true,
     size: 14,
-    score: 0
   },
   {
     name: "SP",
     secular: true,
     size: 14,
     long: "Socialistische Partij",
-    score: 0
   }
 ];
