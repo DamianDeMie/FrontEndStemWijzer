@@ -68,7 +68,7 @@ function checkOpinion(opinion) {
     if (opinion == '') {
         return;
     } else {
-        document.getElementById(opinion).style.setProperty("background-color", "rgb(1, 180, 220)", "important");
+        document.getElementById(opinion).style.setProperty("background-color", "#018aa9", "important");
     }
 }
 
@@ -80,19 +80,22 @@ function continueStemWijzer() {
     document.getElementById("progressBar").style.width =
         progressBar.toString() + "%";
 }
-// Matches the opinion to the parties
+
+
 function matchOpinionsToParties() {
-    //Loops through the questions and parties opinions
-    for (var questions = 0; questions < subjects.length; questions++) {
-        for (var opinion = 0; opinion < parties.length; opinion++) {
-            //Checks if the users input is the same as the parties opinion, if so adds a point.
-            if (subjects[questions].myOpinion == subjects[questions].parties[opinion].position) {
-                parties[opinion].points += 1;
+    //Gets all the question answers from the subject and the opinion from the party
+    subjects.forEach((subject => {
+        parties.forEach((function (party, partyIndex) {
+            //Checks if the opinion that the subject entered is the same as a party, if so adds a point.
+            if (subject.myOpinion == subject.parties[partyIndex].position) {
+                var partyScore = parties.find(party => party.name == subject.parties[partyIndex].name)
+                partyScore.points += 1;
             }
-        }
-    }
+        }))
+    }))
     showResults();
 }
+
 // Shows the results.
 function showResults() {
     document.getElementById("standPage").style.display = "none";
