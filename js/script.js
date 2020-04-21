@@ -93,12 +93,18 @@ function matchOpinionsToParties() {
             }
         }))
     }))
-    showResults();
+    showPartySelection();
 }
+
+function showPartySelection() {
+    document.getElementById("standPage").style.display = "none";
+    document.getElementById("partySelectionPage").style.display = "block";
+};
+
 
 // Shows the results.
 function showResults() {
-    document.getElementById("standPage").style.display = "none";
+    document.getElementById("partySelectionPage").style.display = "none";
     document.getElementById("resultsPage").style.display = "block";
 
     //Puts the results from parties into a variable

@@ -184,3 +184,11 @@ h5 {
     margin: 5% 10% 0%;
     padding: 70px 92px 35px 92px !important;
 }
+
+/* Partijselectie Pagin */
+#partySelectionPage {
+    display: none;
+    background-color: white;
+    margin: 5% 10% 0%;
+    padding: 70px 92px 35px 92px !important;
+}
