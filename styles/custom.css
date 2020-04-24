@@ -192,3 +192,11 @@ h5 {
     margin: 5% 10% 0%;
     padding: 70px 92px 35px 92px !important;
 }
+
+.filterBtn {
+    height: 8vh;
+    font-size: x-large;
+    font-weight: bold;
+    margin-right: 2vw;
+    padding: 0px 50px;
+}

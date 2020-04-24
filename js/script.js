@@ -48,6 +48,7 @@ function backButton() {
 function nextStatement() {
     if (question < subjects.length - 1) {
         progressBar = progressBar + progress;
+        document.getElementById('importantCheckBox').checked = false;
         question++;
         checkOpinion(subjects[question].myOpinion);
         continueStemWijzer();
@@ -60,10 +61,12 @@ function nextStatement() {
 // Gets the opinion that the user entered.
 function getOpinion(opinion) {
     subjects[question].myOpinion = opinion;
+    subjects[question].important = document.getElementById('importantCheckBox').checked;
     nextStatement();
 }
 
 function checkOpinion(opinion) {
+    document.getElementById('importantCheckBox').checked = false;
     for (var opinions = 0; opinions < partyPosition.length; opinions++) {
         document.getElementById(partyPosition[opinions]).style.setProperty("background-color", "black", "important");
     }
@@ -91,7 +94,12 @@ function matchOpinionsToParties() {
             //Checks if the opinion that the subject entered is the same as a party, if so adds a point.
             if (subject.myOpinion == subject.parties[partyIndex].position) {
                 var partyScore = parties.find(party => party.name == subject.parties[partyIndex].name)
-                partyScore.points += 1;
+                if (subject.important == true) {
+                    partyScore.points += 2;
+                }
+                else {
+                    partyScore.points += 1;
+                }
             }
         }))
     }))
@@ -105,20 +113,30 @@ function showPartySelection() {
 
 
 function getAllParties() {
+    changeButtonColor("allParties");
     selectedParties = [];
     selectedParties = parties;
 };
 
 function getBigParties() {
+    changeButtonColor("bigParties");
     selectedParties = [];
     selectedParties = parties.filter(party => party.size >= largePartyNumberOfSeats);
 };
 
 function getSecularParties() {
+    changeButtonColor("secularParties");
     selectedParties = [];
     selectedParties = parties.filter(party => party.secular == true);
 };
 
+function changeButtonColor(partyType) {
+    for (var buttons = 0; buttons < document.getElementsByClassName('filterBtn').length; buttons++) {
+        document.getElementsByClassName('filterBtn')[buttons].style.setProperty("background-color", "black", "important");
+        document.getElementsByClassName('filterBtn')[buttons].style.setProperty("color", "white", "important");
+    }
+    document.getElementById(partyType).style.setProperty("background-color", "#018aa9", "important");
+}
 
 // Shows the results.
 function showResults() {
