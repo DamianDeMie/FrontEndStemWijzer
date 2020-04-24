@@ -3,6 +3,8 @@ const progress = progressBar;
 
 const largePartyNumberOfSeats = 10;
 
+
+var selectedParties = [];
 var question = 0;
 var partyPosition = ["pro", "contra", "none"];
 var data = [];
@@ -102,17 +104,34 @@ function showPartySelection() {
 };
 
 
+function getAllParties() {
+    selectedParties = [];
+    selectedParties = parties;
+};
+
+function getBigParties() {
+    selectedParties = [];
+    selectedParties = parties.filter(party => party.size >= largePartyNumberOfSeats);
+};
+
+function getSecularParties() {
+    selectedParties = [];
+    selectedParties = parties.filter(party => party.secular == true);
+};
+
+
 // Shows the results.
 function showResults() {
     document.getElementById("partySelectionPage").style.display = "none";
     document.getElementById("resultsPage").style.display = "block";
 
     //Puts the results from parties into a variable
-    var PartyResults = parties;
-
-    //Puts the results from PartyResults into the HTML page and logs it in the console as well.
-    document.getElementById('party1stPlace').innerHTML += PartyResults[0].name;
-    document.getElementById('party2ndPlace').innerHTML += PartyResults[1].name;
-    document.getElementById('party3rdPlace').innerHTML += PartyResults[2].name;
-    console.log(parties);
+    if (selectedParties.length == 0) {
+        selectedParties = parties;
+    }
+    console.log(selectedParties);
+    //Puts the results from selectedParties into the HTML page and logs it in the console as well.
+    document.getElementById('party1stPlace').innerHTML += selectedParties[0].name;
+    document.getElementById('party2ndPlace').innerHTML += selectedParties[1].name;
+    document.getElementById('party3rdPlace').innerHTML += selectedParties[2].name;
 }
